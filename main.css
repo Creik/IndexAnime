@@ -383,9 +383,10 @@ article .info ul li{
 		position: absolute;
 		display: block;
 		z-index: 3;
-		width: 1.5em;
-		height: 1.5em;
-		font-size: 1.5em;
+		background-color: dodgerblue;
+		width: 2em;
+		height: 2em;
+		font-size: 2em;
 		transition: all .5s linear;
 	}
 	header.active{
