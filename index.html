@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<title>D</title>
+	<title>IndexAnime</title>
 </head>
 <body>
 	<div class="container">
@@ -168,7 +169,7 @@
 										<span>M</span>
 									</label>
 								</li>
-								<li style="width: 100%;height: .3rem">
+								<li style="width: 100%;height: .3rem; visibility: hidden;">
 									
 								</li>
 								<li>
@@ -775,20 +776,36 @@
 		$(document).ready(function(){
 			console.log("Ready");
 			var $previousOption='0';
+
 			
+			// $	(".abc input").click(function() {
+			// 	var $option = $(this).val();
+			// 	if($option==$previousOption){
+			// 		$( "input#"+$option ).prop( "checked", false );	
+			// 		$previousOption = '0';
+			// 	}else if($previousOption!=='0'){
+			// 		$("input#"+$previousOption).parent().parent().toggleClass("checked");
+			// 	}
+			// 	$previousOption = $option;
+			// 	$("input#"+$option).parent().parent().toggleClass("checked");
+			// });
 			$	(".abc input").click(function() {
 				var $option = $(this).val();
+				console.log("prev "+ $previousOption+" act "+$option);
 				if($option==$previousOption){
-					$( "input#"+$option ).prop( "checked", false );	
+					$( "input#"+$option ).prop( "checked", false );
+					// $("input#"+$option).parent().parent().removeClass("checked");
 					$previousOption = '0';
 				}else{
-					if($previousOption!=='0'){
-						$("input#"+$previousOption).parent().parent().toggleClass("checked");
-					}
+					$("input#"+$previousOption).parent().parent().removeClass("checked");
+					// $("input#"+$option).parent().parent().addClass("checked");
 					$previousOption = $option;
 				}
-					$(this).parent().parent().toggleClass("checked");
+					$("input#"+$option).parent().parent().toggleClass("checked");
 			});
+
+
+
 
 			$	(".genders input").click(function() {
 				$(this).parent().parent().toggleClass("checkedbox");
