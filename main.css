@@ -389,8 +389,7 @@ article .info ul li{
 		transform: translateX(-100%);
 	}
 	article{
-		margin-left: 0px;
-		margin-right: 0px;
+		margin: 0px;
 		border-radius: 0px;
 	}
 }
@@ -425,23 +424,9 @@ article .tec{
 	/*transition: all 10s linear;*/
 }
 article .tec ul li{
-	border-radius: 25px;
-	/*border: 1px solid dodgerblue;*/
-	/*background-color: lightgreen;*/
 	margin: .7em 0;
-	/*font-size: 1.2em;*/
-	/*width: 1.7em;*/
 	line-height: 1;
-	/*text-shadow: 0px 0px 5px black,0px 0px 5px black;*/
-	/*box-shadow: inset 0 0 2px 2px dodgerblue;*/
-	/*padding: .4em 10.67px;*/
-	text-align: center;
-
-	/*line-height: 1.7em;*/
-	/*margin: .2em 0;*/
-	/*height: 1.7em;*/
 	font-weight: bold;
 	text-shadow: 1px 0px 1px rgba(0,0,0,.7), 0px 1px 1px rgba(0,0,0,.7),
 	-1px 0px 1px rgba(0,0,0,.7), 0px -1px 1px rgba(0,0,0,.7);
-	/*text-shadow: 0px 0px .5em rgba(0,0,0,1);	*/
 }
