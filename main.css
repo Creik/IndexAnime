@@ -6,6 +6,9 @@
 	line-height: normal;
 	box-sizing: border-box;
 }
+.btnMenu{
+	display: none;
+}
 body{
 	width: 100vw;
 	font-size: 16px;
@@ -374,6 +377,20 @@ article .info ul li{
 	-1px 0px 1px rgba(0,0,0,.7), 0px -1px 1px rgba(0,0,0,.7);
 }
 @media (max-width: 640px){
+	.btnMenu{
+		border-radius: 0% 100% 100%;
+		border: none;
+		position: absolute;
+		display: block;
+		z-index: 3;
+		width: 1.5em;
+		height: 1.5em;
+		font-size: 1.5em;
+		transition: all .5s linear;
+	}
+	header.active{
+		transform: translateX(0) !important;
+	}
 	body{
 		font-size: 12px;
 	}
@@ -387,6 +404,7 @@ article .info ul li{
 		max-width: 100vw;
 		z-index: 2;
 		transform: translateX(-100%);
+		transition: all .5s linear;
 	}
 	article{
 		border: none;

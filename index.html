@@ -8,7 +8,9 @@
 <body>
 	<div class="container">
 		<div class="row">
-
+			<button class="btnMenu">
+				X
+			</button>
 			<header class="row">
 				<div id="title" class="col">
 					<h1>Index Of Anime & Manga!</h1>
@@ -1031,7 +1033,10 @@
 				console.log("change");
 				$(this).addClass("selected");
 			});
-
+			$(".btnMenu").click(function(e){
+				e.preventDefault();
+				$("header").toggleClass("active");
+			});
 			$("form button").click(function(e){
 				console.log("Prevent");
 				e.preventDefault();
