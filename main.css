@@ -389,7 +389,9 @@ article .info ul li{
 		transform: translateX(-100%);
 	}
 	article{
-		margin: 0px;
+		border: none;
+		margin: .5em 0;
+		box-shadow: 0px 0px 5px rgba(0,0,0,0.7);
 		border-radius: 0px;
 	}
 }
