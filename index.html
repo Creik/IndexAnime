@@ -1050,7 +1050,35 @@
 				});
 			});
 		 }); 
-
-
+	</script>
+	<script type="text/javascript">
+		var inicio;
+		var menu=false;
+		$(document).on("touchstart", function(e) {
+			inicio=e.touches[0].clientX;
+			// console.log(inicio);
+		});
+		$(document).on("touchmove", function(e) {
+			var touch = e.touches[0];
+			if(touch.clientX>inicio){
+				var change = 100 - (touch.clientX - inicio);
+			}else{
+				var change = inicio- touch.clientX;
+			}
+			console.log(change);
+			if(change>=100){
+				
+			}else{
+				$("header").css({'left':'-' + change + '%'});
+			}
+		});
+		$(document).on("touchend", function(e) {
+			if(menu==false){
+				$("header").css({'left':'0%','transition':'all .3'});
+			}else{
+				$("header").css({'left':'-100%','transition':'all .3'});
+			}
+				menu=!menu;
+		});
 	</script>
 </html>
