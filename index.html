@@ -1053,32 +1053,53 @@
 	</script>
 	<script type="text/javascript">
 		var inicio;
+		var man;
+		var width = $(window).width();
+		var change;
+
+		var height = $(window).height();
 		var menu=false;
 		$(document).on("touchstart", function(e) {
+			$("header").css({'transition':''});
 			inicio=e.touches[0].clientX;
 			// console.log(inicio);
 		});
 		$(document).on("touchmove", function(e) {
 			var touch = e.touches[0];
-			if(touch.clientX>inicio){
-				var change = 100 - (touch.clientX - inicio);
+			if(menu==false){
+				change = (touch.clientX-inicio);
+				if(change<=width){
+					$("header").css({'right':(width-change)+"px"});
+				}
 			}else{
-				var change = inicio- touch.clientX;
+				change = inicio-touch.clientX;
+				if(change<=width){
+					$("header").css({'right':change+"px"});
+				}
 			}
+			man= width-change;
 			console.log(change);
-			if(change>=100){
-				
+			if(change<=width){
 			}else{
-				$("header").css({'left':'-' + change + '%'});
 			}
 		});
 		$(document).on("touchend", function(e) {
 			if(menu==false){
-				$("header").css({'left':'0%','transition':'all .3'});
+				if(change>(width/3)){
+					$("header").css({'right':'0','transition':'all .3s linear'});
+					menu=!menu;
+				}else{
+					$("header").css({'right':'100%'});
+				}
 			}else{
-				$("header").css({'left':'-100%','transition':'all .3'});
+				if(change>(width/3)){
+					$("header").css({'right':'100%','transition':'all .3s linear'});
+					menu=!menu;
+				}else{
+					$("header").css({'right':'0'});
+				}
 			}
-				menu=!menu;
+			change=0;
 		});
 	</script>
 </html>
