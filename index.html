@@ -1053,53 +1053,110 @@
 	</script>
 	<script type="text/javascript">
 		var inicio;
-		var man;
 		var width = $(window).width();
-		var change;
+		console.log(width);
+		console.log(width/4);
+		console.log(width-(width/4));
+
+		var cambio;
 
 		var height = $(window).height();
 		var menu=false;
-		$(document).on("touchstart", function(e) {
+		// $(document).on("touchstart", function(e) {
+		// 	if(menu==false){
+		// 		if(e.touches[0].clientX<=(width/4)){
+		// 			$("header").css({'transition':''});
+		// 			inicio=e.touches[0].clientX;
+		// 			// console.log(inicio);
+		// 		}
+		// 	}else{
+		// 		if (e.touches[0].clientX>=(width - (width/4))) {
+		// 			$("header").css({'transition':''});
+		// 			inicio=e.touches[0].clientX;
+		// 		}
+		// 	}
+
+		// 	$(this).on("touchmove", function(e) {
+		// 		var touch = e.touches[0];
+		// 		if(menu==false){
+		// 			change = (touch.clientX-inicio);
+		// 			if(change<=width){
+		// 				$("header").css({'right':(width-change)+"px"});
+		// 			}
+		// 		}else{
+		// 			change = inicio-touch.clientX;
+		// 			if(change<=width){
+		// 				$("header").css({'right':change+"px"});
+		// 			}
+		// 		}
+		// 		man= width-change;
+		// 		console.log(change);
+		// 		if(change<=width){
+		// 		}else{
+		// 		}
+		// 	});
+		// 	$(document).on("touchend", function(e) {
+		// 		if(menu==false){
+		// 			if(change>(width/4)){
+		// 				$("header").css({'right':'0','transition':'all .3s linear'});
+		// 				menu=!menu;
+		// 			}else{
+		// 				$("header").css({'right':'100%','transition':'all .3s linear'});
+		// 			}
+		// 		}else{
+		// 			if(change>(width/4)){
+		// 				$("header").css({'right':'100%','transition':'all .3s linear'});
+		// 				menu=!menu;
+		// 			}else{
+		// 				$("header").css({'right':'0','transition':'all .3s linear'});
+		// 			}
+		// 		}
+		// 		change=0;
+		// 	});
+		// });
+		$(document).on('touchstart',function(ev){
 			$("header").css({'transition':''});
-			inicio=e.touches[0].clientX;
-			// console.log(inicio);
+			inicio=ev.touches[0].clientX;
+			cambio=0;
 		});
-		$(document).on("touchmove", function(e) {
-			var touch = e.touches[0];
+		$(document).on('touchmove',function(ev){
+			var touch = ev.touches[0]; 
 			if(menu==false){
-				change = (touch.clientX-inicio);
-				if(change<=width){
-					$("header").css({'right':(width-change)+"px"});
+				if(inicio<=(width/4) && touch.clientX>=inicio){
+					cambio=touch.clientX-inicio;
+					$("header").css({'left':'-'+(width*.8-cambio)+"px"});
 				}
 			}else{
-				change = inicio-touch.clientX;
-				if(change<=width){
-					$("header").css({'right':change+"px"});
+				if(inicio>width*.799 & touch.clientX<=inicio){
+					cambio=touch.clientX-inicio;
+					// console.log(-width*.8);
+					if(cambio>=(-width*.9)){
+						$("header").css({'left':cambio+"px"});
+					}
 				}
-			}
-			man= width-change;
-			console.log(change);
-			if(change<=width){
-			}else{
 			}
 		});
-		$(document).on("touchend", function(e) {
+		$(document).on('touchend',function(ev){
+			if(cambio<0){
+				cambio=cambio*-1;
+			}
+			// console.log(cambio);
+			$("header").css({'transition':'all .3s linear'});
 			if(menu==false){
-				if(change>(width/3)){
-					$("header").css({'right':'0','transition':'all .3s linear'});
-					menu=!menu;
+				if (cambio>width/4) {
+					$("header").css({'left':0+"px"});
+					menu=true;
 				}else{
-					$("header").css({'right':'100%'});
+					$("header").css({'left':-100+"%"});
 				}
 			}else{
-				if(change>(width/3)){
-					$("header").css({'right':'100%','transition':'all .3s linear'});
-					menu=!menu;
+				if (cambio>width/4) {
+					$("header").css({'left':-100+"%"});
+					menu=false;
 				}else{
-					$("header").css({'right':'0'});
+					$("header").css({'left':0+"px"});
 				}
 			}
-			change=0;
 		});
 	</script>
 </html>
