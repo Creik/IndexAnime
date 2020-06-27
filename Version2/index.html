@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<!-- <link rel="stylesheet" type="text/css" href="normalize.css"> -->
+	<title>IndexAnime</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<header class="row">
+				<div id="title" class="col">
+					<h1 onclick="myFunction2()">Index Of Anime & Manga!</h1>
+				</div>
+				<form id="search-options">
+					<section id="search-section">
+						<fieldset>
+							<legend>Buscador</legend>
+							<input id="search" type="search" name="" placeholder="Anime/Manga" autocomplete="off">
+						</fieldset>	
+					</section>
+					<section id="a-z">
+						<fieldset>
+							<legend>#-Z</legend>
+							<ul>
+								<li>
+									<label for="num">
+										<input id="num" name="abc" type="radio" value="num">
+										<span>#</span>
+									</label>
+								</li>
+								<li>
+									<label for="A">
+										<input id="A" name="abc" type="radio" value="A">
+										<span>A</span>
+									</label>
+								</li>
+								<li>
+									<label for="B">
+										<input id="B" name="abc" type="radio" value="B">
+										<span>B</span>
+									</label>
+								</li>
+								<li>
+									<label for="C">
+										<input id="C" name="abc" type="radio" value="C">
+										<span>C</span>
+									</label>
+								</li>
+								<li>
+									<label for="D">
+										<input id="D" name="abc" type="radio" value="D">
+										<span>D</span>
+									</label>
+								</li>
+								<li>
+									<label for="E">
+										<input id="E" name="abc" type="radio" value="E">
+										<span>E</span>
+									</label>
+								</li>
+								<li>
+									<label for="F">
+										<input id="F" name="abc" type="radio" value="F">
+										<span>F</span>
+									</label>
+								</li>
+								<li>
+									<label for="G">
+										<input id="G" name="abc" type="radio" value="G">
+										<span>G</span>
+									</label>
+								</li>
+								<li>
+									<label for="H">
+										<input id="H" name="abc" type="radio" value="H">
+										<span>H</span>
+									</label>
+								</li>
+								<li>
+									<label for="I">
+										<input id="I" name="abc" type="radio" value="I">
+										<span>I</span>
+									</label>
+								</li>
+								<li>
+									<label for="J">
+										<input id="J" name="abc" type="radio" value="J">
+										<span>J</span>
+									</label>
+								</li>
+								<li>
+									<label for="K">
+										<input id="K" name="abc" type="radio" value="K">
+										<span>K</span>
+									</label>
+								</li>
+								<li>
+									<label for="L">
+										<input id="L" name="abc" type="radio" value="L">
+										<span>L</span>
+									</label>
+								</li>
+								<li>
+									<label for="M">
+										<input id="M" name="abc" type="radio" value="M">
+										<span>M</span>
+									</label>
+								</li>
+								<li style="width: 100%;height: .3rem; visibility: hidden;">
+									
+								</li>
+								<li>
+									<label for="N">
+										<input id="N" name="abc" type="radio" value="N">
+										<span>N</span>
+									</label>
+								</li>
+								<li>
+									<label for="O">
+										<input id="O" name="abc" type="radio" value="O">
+										<span>O</span>
+									</label>
+								</li>
+								<li>
+									<label for="P">
+										<input id="P" name="abc" type="radio" value="P">
+										<span>P</span>
+									</label>
+								</li>
+								<li>
+									<label for="Q">
+										<input id="Q" name="abc" type="radio" value="Q">
+										<span>Q</span>
+									</label>
+								</li>
+								<li>
+									<label for="R">
+										<input id="R" name="abc" type="radio" value="R">
+										<span>R</span>
+									</label>
+								</li>
+								<li>
+									<label for="S">
+										<input id="S" name="abc" type="radio" value="S">
+										<span>S</span>
+									</label>
+								</li>
+								<li>
+									<label for="T">
+										<input id="T" name="abc" type="radio" value="T">
+										<span>T</span>
+									</label>
+								</li>
+								<li>
+									<label for="U">
+										<input id="U" name="abc" type="radio" value="U">
+										<span>U</span>
+									</label>
+								</li>
+								<li>
+									<label for="V">
+										<input id="V" name="abc" type="radio" value="V">
+										<span>V</span>
+									</label>
+								</li>
+								<li>
+									<label for="W">
+										<input id="W" name="abc" type="radio" value="W">
+										<span>W</span>
+									</label>
+								</li>
+								<li>
+									<label for="X">
+										<input id="X" name="abc" type="radio" value="X">
+										<span>X</span>
+									</label>
+								</li>
+								<li>
+									<label for="Y">
+										<input id="Y" name="abc" type="radio" value="Y">
+										<span>Y</span>
+									</label>
+								</li>
+								<li>
+									<label for="Z">
+										<input id="Z" name="abc" type="radio" value="Z">
+										<span>Z</span>
+									</label>
+								</li>
+							</ul>
+						</fieldset>						
+					</section>
+					<section id="generos">
+						<fieldset>
+							<legend>Generos</legend>
+							<ul>
+								<li>
+									<label for="accion">
+										<input id="accion" type="checkbox" value="accion">
+										<span>Accion</span>
+									</label>
+								</li>
+								<li>
+									<label for="aventura">
+										<input id="aventura" type="checkbox" value="aventura">
+										<span>Aventura</span>
+									</label>
+								</li>
+								<li>
+									<label for="comedia">
+										<input id="comedia" type="checkbox" value="comedia">
+										<span>Comedia</span>
+									</label>
+								</li>
+								<li>
+									<label for="romance">
+										<input id="romance" type="checkbox" value="romance">
+										<span>Romance</span>
+									</label>
+								</li>
+								<li>
+									<label for="drama">
+										<input id="drama" type="checkbox" value="drama">
+										<span>Drama</span>
+									</label>
+								</li>
+								<li>
+									<label for="fantasia">
+										<input id="fantasia" type="checkbox" value="fantasia">
+										<span>Fantasia</span>
+									</label>
+								</li>
+								<li>
+									<label for="sci-fi">
+										<input id="sci-fi" type="checkbox" value="sci-fi">
+										<span>Sci-Fi</span>
+									</label>
+								</li>
+								<li>
+									<label for="isekai">
+										<input id="isekai" type="checkbox" value="isekai">
+										<span>Isekai</span>
+									</label>
+								</li>
+								<li>
+									<label for="misterio">
+										<input id="misterio" type="checkbox" value="misterio">
+										<span>Misterio</span>
+									</label>
+								</li>
+								<li>
+									<label for="mecha">
+										<input id="mecha" type="checkbox" value="mecha">
+										<span>Mecha</span>
+									</label>
+								</li>
+								<li>
+									<label for="seinen">
+										<input id="seinen" type="checkbox" value="seinen">
+										<span>Seinen</span>
+									</label>
+								</li>
+								<li>
+									<label for="deportes">
+										<input id="deportes" type="checkbox" value="deportes">
+										<span>Deportes</span>
+									</label>
+								</li>
+								<li>
+									<label for="shoujo">
+										<input id="shoujo" type="checkbox" value="shoujo">
+										<span>Shoujo</span>
+									</label>
+								</li>
+								<li>
+									<label for="musical">
+										<input id="musical" type="checkbox" value="musical">
+										<span>Musical</span>
+									</label>
+								</li>
+								<li>
+									<label for="shounen">
+										<input id="shounen" type="checkbox" value="shounen">
+										<span>Shounen</span>
+									</label>
+								</li>	
+							</ul>
+						</fieldset>
+					</section>
+					<section id="filtros">
+						<fieldset>
+							<legend>Filtros</legend>
+							<ul>
+								<li>
+									<select id="fansub">
+										<option style="display: none;">Fansub/Scanlation</option>
+										<option>Japan Universe</option>
+										<option>Neko no Fansub</option>
+										<option>Tekeremata</option>
+									</select>
+									<button class="reset">X</button>
+								</li>
+								<li>
+									<select id="estudio">
+										<option style="display: none;">Estudio</option>
+										<option value="NekonoFansub">KYOANI</option>
+										<option value="AnimeTeam">Toei Animation</option>	
+									</select>
+									<button class="reset">X</button>
+								</li>
+								<li>
+									<select id="año">
+										<option style="display: none;">Año</option>
+										<option>2020</option>
+										<option>2019</option>
+										<option>2018</option>
+									</select>
+									<button class="reset">X</button>
+								</li>
+								<li>
+									<select id="autor">
+										<option style="display: none;">Autor</option>
+										<option>Osamu Tezuka</option>
+										<option>Akira Toriyama</option>
+										<option>Katsuhiro Otomo</option>
+									</select>
+									<button class="reset">X</button>
+								</li>
+							</ul>
+							<section id="forAnime" style="padding-left: .7em">
+								<fieldset>
+									<legend onclick="myFunction()">Filtros para Anime</legend>
+									<ul style="display: none;">
+										<li>
+											<select id="calidad">
+												<option style="display: none;">Calidad</option>
+												<option>BDrip</option>
+												<option>DVDrip</option>
+												<option>HDTV</option>
+											</select>
+											<button class="reset">X</button>
+										</li>
+										<li>
+											<select id="resolucion">
+												<option style="display: none;">Resolucion</option>
+												<option value="">FHD(1080p)</option>
+												<option value="">HD(720p)</option>	
+												<option value="">SD(<=576p)</option>	
+											</select>
+											<button class="reset">X</button>
+										</li>
+										<li>
+											<select id="Audio">
+												<option style="display: none;">Audio</option>
+												<option>FLAAC</option>
+												<option>ACC</option>
+											</select>
+											<button class="reset">X</button>
+										</li>
+										<li>
+											<select id="conetenedor">
+												<option style="display: none;">Contenedor</option>
+												<option>MKV</option>
+												<option>MP4</option>
+												<option>AVI</option>
+											</select>
+											<button class="reset">X</button>
+										</li>
+									</ul>
+								</fieldset>
+							</section>
+						</fieldset>
+					</section>
+				</form>
+			</header>
+			<main class="row">
+				
+			</main>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			var opcionPrevia='0';
+			$("#a-z input").on('click',function(){
+				var opcionActual= '#'+$(this).prop('id');
+				console.log(opcionActual);
+				console.log(opcionPrevia);
+				if(opcionActual!=opcionPrevia){
+					$(this).next().addClass('checked');
+					
+					if(opcionPrevia!=0){
+						$('input'+opcionPrevia).next().removeClass('checked');
+					}
+				}else{
+					$('input'+opcionActual).prop('checked',false);
+					$(this).next().removeClass('checked');
+				}
+				opcionPrevia=opcionActual;
+			});
+
+			$("#generos input").on('click',function(){
+				$(this).parent().parent().toggleClass('checked');
+			});
+
+
+			$('.reset').on('click', function(ev){
+				ev.preventDefault();
+				$(this).css({'display':'none'});
+				var resetName= '#'+$(this).prev().prop('id');
+				$(resetName).css({"background-color":"white","color":"black"});
+				$(resetName+" option").each(function(){
+					$(this).prop("selected",false);
+				});
+				console.log("Select "+resetName);
+			});
+
+			$('select').on("change",function(){
+				$(this).css({"background-color":"dodgerblue","color":"white"});
+				$(this).next().css({'display':'block'});
+			});
+		});
+			function myFunction(){
+				$('#forAnime ul').toggleClass('active');
+			};
+			function myFunction2(){
+				$('header').toggleClass('active');
+			}
+	</script>
+</body>
+</html>

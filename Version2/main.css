@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css?family=Federant);
+
+*{
+	padding: 0px;
+	margin: 0px;
+	line-height: normal;
+	box-sizing: border-box;
+}
+li{
+	list-style: none;
+}
+body{
+	width: 100vw;
+	font-size: 16px;
+	overflow: hidden;
+	font-family: Federant;
+	background-color: rgba(0,0,0,0.125);
+}
+.container{
+	width: 100%;
+}
+.row{
+	display: flex;
+}
+header{
+	background-color: dodgerblue;
+	height: 100vh;
+	flex: 1 0 22.8em;
+	max-width: 100%;
+	
+	margin-right: 0.125625em;
+	
+	background-color: white;
+
+	flex-direction: column;
+	
+	padding: 1em;
+}
+header #title{
+
+}
+header #title h1{
+	text-align: center;
+}
+header fieldset{
+	border-left: none;
+	border-right: none;
+	border-bottom: none;
+	border-top: 1px solid grey;
+}
+header fieldset legend{
+ margin-left: .3em;
+}
+/*Buscador por palabra*/
+header form #search-section #search{
+	display: block;
+	padding: .3em .7em;
+	color: gray;
+	font-family: Federant;
+	font-size: 1em;
+	box-shadow: 0px 0px 3px 1px lightgray;
+	width: 80%;
+	outline: none;
+	border-radius: 20px;
+	margin:.3em auto;
+	border: 1px solid transparent;
+}
+/*Buscador por letra*/
+#a-z ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin:.3em auto;
+}
+#a-z ul li{
+	position: relative;
+	text-align: center;
+	cursor: pointer;
+	z-index: 2;
+	transition: transform .2s linear;
+}
+#a-z ul li:hover label span{
+	padding: 0;
+	margin: 0em .2em;
+	z-index: 1;
+	transform: scale(1.8);
+	color: orange;
+}
+#a-z span.checked{
+	padding: 0 !important;
+	margin: 0em .2em;
+	z-index: 1;
+	transform: scale(1.8);
+	color: orange;	
+}
+#a-z ul li label{
+	position: relative;
+}
+#a-z ul li label input{
+	position: absolute;
+	visibility: hidden;
+}
+#a-z ul li label span{
+	position: relative;
+	display: block;
+	font-size: 1.2em;
+	padding: 0 .2em;
+	cursor: pointer;
+	z-index: 2;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 
+}
+/*Buscador por Generos*/
+header #generos label span{
+	display: block;
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	padding: .2em;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none; 	
+	cursor: pointer;
+}
+header #generos ul input{
+	position: absolute;
+	visibility: hidden;
+}
+header #generos ul{
+	display: flex;
+	/*width: 90%;*/
+	margin-left: .3em;
+	/*justify-content: space-between;*/
+	/*justify-content: space-around;*/
+	justify-content: center;
+	flex-wrap: wrap;
+	z-index: 3;
+}
+header #generos ul li{
+	position: relative;
+	border: 1px solid orange;
+	z-index: 2;
+	text-align: center;
+	font-size: 1em;
+	margin: .3em .2em 0em;
+	transition: all .2s linear;
+}
+header #generos ul li:hover{
+	background-color: orange;
+	color: white;
+}
+header #generos ul li.checked{
+	background-color: orange;
+	color: white;
+}
+/*Filtros de busqueda*/
+#filtros ul,
+#forAnime ul{
+	display: flex;
+	flex-wrap: wrap;
+	padding-top: .4em;
+	justify-content: center;
+}
+#filtros ul li,
+#forAnime ul li{
+	position: relative;
+	margin: .0em .4em .4em 0em;
+}
+#filtros select,
+#forAnime select{
+	position: relative; 
+	border: .125em solid skyblue;
+	padding: .2em;
+	padding-right: .4em; 
+	font-size: 1em; 
+	font-family: Federant; 
+	outline: none;
+}
+#filtros select option,
+#forAnime select option{
+	background-color: white;
+	color: black;
+}
+#forAnime ul.active{
+	display: flex !important;
+}
+.reset{
+	display: none;
+	top: .125em;
+	right: .125em;
+	font-size: 1em;
+	padding: 0 .2em;
+	height: 28.38px;
+	border: none;
+	background-color: skyblue;
+	position: absolute;
+	outline: none; 
+}
+main::-webkit-scrollbar {
+  display: none;
+}
+@media (max-width: 640px){
+	body{
+		font-size: 14px;
+	}
+	header{
+		position: absolute;
+		bottom: 0;
+		transform: translateY(92%);
+		margin: 0;
+		transition: .3s;
+	}
+	header.active{
+		transform: translateY(50%) !important;
+	}
+}
