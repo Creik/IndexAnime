@@ -105,7 +105,7 @@ header form #search-section #search{
 }
 #a-z ul li label input{
 	position: absolute;
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 #a-z ul li label span{
 	position: relative;

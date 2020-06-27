@@ -10,9 +10,9 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<header class="row">
+			<header class="row active">
 				<div id="title" class="col">
-					<h1 onclick="myFunction2()">Index Of Anime & Manga!</h1>
+					<h1>Index Of Anime & Manga!</h1>
 				</div>
 				<form id="search-options">
 					<section id="search-section">
@@ -381,11 +381,12 @@
 			</main>
 		</div>
 	</div>
+	<script src="hammer.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	<script>
+<!-- 	<script>
 		$(document).ready(function(){
 			var opcionPrevia='0';
-			$("#a-z input").on('click tap',function(ev){
+			$("#a-z input").on('tap',function(ev){
 				alert(ev.type);
 				var opcionActual= '#'+$(this).prop('id');
 				console.log(opcionActual);
@@ -431,6 +432,18 @@
 			function myFunction2(){
 				$('header').toggleClass('active');
 			}
+	</script> -->
+	<script type="text/javascript">
+		var myElement = document.getElementById('A');
+		console.log(myElement);
+		// create a simple instance
+		// by default, it only adds horizontal recognizers
+		var mc = new Hammer(myElement);
+
+		// listen to events...
+		mc.on("tap", function(ev) {
+		    alert(ev.type);
+		});
 	</script>
 </body>
 </html>
