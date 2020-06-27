@@ -385,7 +385,8 @@
 	<script>
 		$(document).ready(function(){
 			var opcionPrevia='0';
-			$("#a-z input").on('click',function(){
+			$("#a-z input").on('click tap',function(ev){
+				alert(ev.type);
 				var opcionActual= '#'+$(this).prop('id');
 				console.log(opcionActual);
 				console.log(opcionPrevia);

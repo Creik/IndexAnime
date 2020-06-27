@@ -22,7 +22,7 @@ body{
 .row{
 	display: flex;
 }
-@media (width: 1080px){
+/*@media (width: 1080px){
 	#a-z ul li:hover label span{
 		padding: 0;
 		margin: 0em .2em;
@@ -34,7 +34,7 @@ body{
 		background-color: orange;
 		color: white;
 	}
-}
+}*/
 header{
 	background-color: dodgerblue;
 	height: 100vh;
