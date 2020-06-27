@@ -109,7 +109,7 @@
 										<span>M</span>
 									</label>
 								</li>
-								<li style="width: 100%;height: .3rem; visibility: hidden;">
+								<li style="width: 100%;height: .5rem; visibility: hidden;">
 									
 								</li>
 								<li>
@@ -398,6 +398,7 @@
 				}else{
 					$('input'+opcionActual).prop('checked',false);
 					$(this).next().removeClass('checked');
+					opcionActual='0';
 				}
 				opcionPrevia=opcionActual;
 			});
